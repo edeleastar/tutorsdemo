@@ -1,0 +1,512 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+  <div class="ui container">
+<style>
+
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+</style>
+
+
+<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+  <header class="header item">
+    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
+    1: Overview & Tools
+  </header>
+
+  <a class="active item" data-tab="Android-Tools-01"> Android-Tools-01 </a>
+    <a class="item" data-tab="01"> 01 </a>
+    <a class="item" data-tab="02"> 02 </a>
+    <a class="item" data-tab="03"> 03 </a>
+    <a class="item" data-tab="04"> 04 </a>
+    <a class="item" data-tab="05"> 05 </a>
+    <a class="item" data-tab="06"> 06 </a>
+    <a class="item" data-tab="07"> 07 </a>
+</div>
+
+<div class="ui bottom attached  active tab segment lab" data-tab="Android-Tools-01">
+  <div class "ui segment">
+    <br>
+  </div>
+  <h1>Objectives</h1>
+<p>Here we discuss how to install and set up effective tools for Android application development. These include the Android Studio IDE  + an emulator. The emulator we hope to use - Genymotion - is a third party application not strictly part of the android build tools. Optionally, in some cases, we may use an emulator that is included as part of Android Studio installation although this may prove significantly slower than Genymotion. It may not be possible to use an emulator in some environments and in such cases it shall be necessary to test on a physical device such as a phone or tablet.</p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="01">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Android Studio &amp; SDK Tools</h1>
+<p>These steps describe how to download and install Android Studio &amp; bundled SDK Tools:</p>
+<ul>
+<li>
+<p><font color='red'><strong>Warning</strong></font>: Android Studio, at this time, requires that <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">Java 7 JDK </a> is installed. The IDE is not compatible with Java 8. See the documentation <a href="http://developer.android.com/sdk/index.html#Requirements">System Requirements for Android Studio</a>. This should be attended to before proceeding with the steps below.</p>
+</li>
+<li>
+<p><font color='red'><strong>Warning</strong></font>: Before proceeding we recommend that, to avoid the occurrence of obscure errors, you delete any legacy version of Android Studio and Android SDK that might be present on your system.</p>
+<ul>
+<li>On Windows this may be achieved by, for example in the case of Windows 7, accessing Programs and Features in the Control panel and double clicking on Andoid Studio and ticking all checkboxes as shown in Figure 1.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 1: Uninstalling Android Studio and SDK on Windows 7" src="img/01.png"></p>
+<ul>
+<li>In the case of the Mac, the following script has successfully removed all traces of legacy Andoid Studio (Mavericks &amp; Yosemite):</li>
+</ul>
+<pre><code>#!/bin/bash
+sudo rm -Rf /Applications/Android\ Studio.app
+sudo rm -Rf ~/Library/Preferences/AndroidStudio*
+sudo rm ~/Library/Preferences/com.google.android.studio.plist
+sudo rm -Rf ~/Library/Application\ Support/AndroidStudio*
+sudo rm -Rf ~/Library/Logs/AndroidStudio*
+sudo rm -Rf ~/Library/Caches/AndroidStudio*
+sudo rm -Rf ~/AndroidStudioProjects
+sudo rm -Rf ~/.gradle
+sudo rm -Rf ~/.android
+sudo rm -Rf ~/Library/Android*
+exit 0
+</code></pre>
+
+<ul>
+<li>Download the latest <a href="https://developer.android.com/sdk/index.html">Android Studio</a> and save to a temporary folder. </li>
+</ul>
+<p><img alt="Figure 2: Download Android Studio appropriate to your operating system" src="img/02.png"></p>
+<ul>
+<li>In the case of OSX (Mac) double click on the downloaded dmg file (example android-studio-ide-141.1980579-mac).<ul>
+<li>Drag the Android Studio icon to the Applications folder. See Figure 3.<br><br></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 3: Android installer for Mac" src="img/03.png"></p>
+<ul>
+<li>In the case of Windows double click on the downloaded installer which lookes something like (not necessarily exactly like) this: <img alt="" src="img/04.png"><ul>
+<li>Then proceed through the various steps in the wizard such as those illustrated in the screenshots below.</li>
+<li>Note: these screenshot refer to installation on Windows 10.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 4: Welcome to Android Studio Setup" src="img/001.png">
+<img alt="Figure 5: Choose Components: Performance applies only to computer with Intel cpu" src="img/002.png">
+<img alt="Figure 6: License Agreement" src="img/003.png">
+<img alt="Figure 7: Installation locations" src="img/004.png">
+<img alt="Figure 8: Applicable where system detected as suitable to run in accelerated mode" src="img/005.png">
+<img alt="Figure 9: Choose Start Menu Folder" src="img/006.png">
+<img alt="Figure 10: Installation in progress" src="img/007.png">
+<img alt="Figure 11: Installation complete" src="img/008.png">
+<img alt="Figure 12: Tick check box Start Android Studio to launch" src="img/009.png">
+<img alt="Figure 13: Option to import settings from previous install Android Studio" src="img/010.png">
+<img alt="Figure 14: Choose a theme" src="img/011.png">
+<img alt="Figure 15: Components being downloaded" src="img/012.png">
+<img alt="Figure 16: All components downloaded" src="img/013.png">
+<img alt="Figure 17: Welcome screen presenting range of options" src="img/014.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="02">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Your First Android App</h1>
+<p>To create your first Android app launch Android Studio and follow the sequence of steps in the figures below:</p>
+<p><img alt="Figure 1: Start a new Android Studio project" src="img/014a.png"></p>
+<p>In Figure 2 you will be asked for your Company Domain. The purpose of this is to facilitate compliance with the <a href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">Java package naming convention</a>. Here, in this lab, we provide a fictitious domain.</p>
+<p><img alt="Figure 2: Accept default project name My Application, provide a company domain and project location" src="img/015.png">
+<img alt="Figure 3: Accept the default form factors" src="img/016.png">
+<img alt="Figure 4: Select  Blank Acivity template" src="img/017.png">
+<img alt="Figure 5: Accept the default settings in Customize the Activity screen" src="img/018.png">
+<img alt="Figure 6: Wait while project builds" src="img/019.png"></p>
+<p>Figure 7 show a typical perspective when the project opens.
+<img alt="Figure 7: Project opens in Android Studio - close the Tip of the Day window" src="img/020.png">
+<img alt="Figure 8: Expanded app hierarchy" src="img/021.png"></p>
+<p><img alt="Figure 9: Run app from menu command or by pressing toolbar icon" src="img/70.png"></p>
+<p><img alt="Figure 10: Ensure app built and indexing complete" src="img/68.png"></p>
+<p>Figure 11, <em>Choose Device</em>, shows the built-in-emulator (Android virtual device - AVD) selected. </p>
+<p>There are three possible approaches to testing your Android app during development:</p>
+<ul>
+<li>Use the AVD in conjunction with the HAXM accelerator:<ul>
+<li>Note that unless you successfully deploy the HAXM accelerator it is unlikely that the AVD will run sufficiently quickly to be of any real value.</li>
+<li>HAXM is deployable only on Intel based processors. It will not work, for example, on computers using AMD chips as their main microprocessors.</li>
+</ul>
+</li>
+<li>Use the third party Genymotion virtual device. This is discussed in a following step.<ul>
+<li>Genymotion will not work in all environments. For example, at the time of writing it is not fully supported on Windows 10 and considerable manual configuration (by trial and error) has been required. The situation may, hopefully, improve with further updates of Virtual Box and Genymotion.</li>
+<li>Problems have also been encountered on earlier Windows versions.</li>
+</ul>
+</li>
+<li>Use a physical device such as an Android phone or Android tablet.<ul>
+<li>We provide an example of how to do this later in the lab.</li>
+</ul>
+</li>
+</ul>
+<p>The following screenshots illustrate use of built-in AVD to test the app:</p>
+<p><img alt="Figure 11: Launch the built-in emulator" src="img/71.png">
+<img alt="Figure 12: Confirmation the emulator software is running in accelerated mode" src="img/72.png">
+<img alt="Figure 13: Confirmation emulator has launched" src="img/73.png">
+<img alt="Figure 14: Emulator brought into view displaying default text - Hello world!" src="img/022.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="03">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Genymotion emulator installation</h1>
+<p>During development of an Android application it is necessary to compile and run the app many times. The app may be tested by installing and running it on a physical device, such as an Android phone or tablet. But the app may also be run on a virtual device or emulator. In this course we shall have a choice of two emulators, Genymotion and Android Virtual Device (AVD). </p>
+<ul>
+<li>Genymotion is produced by a third party and includes a free version for personal use. Our experience to date is that it is orders of magnitude faster than AVD and consequently it is our intention to use this in preference to AVD. </li>
+</ul>
+<p>To use Genymotion requires that it be downloaded and installed to your computer and that a Genymotion plugin be installed and configured in Android Studio. </p>
+<ul>
+<li>
+<p>This step briefly describes how to download the Genymotion emulator ensuring, in the case of Windows, you select the version that includes VirtualBox.</p>
+</li>
+<li>
+<p>The next step describes how to install and configure the Genymotion plugin in Android Studio.</p>
+<ul>
+<li>A useful guide to the install procedure is online <a href="https://www.genymotion.com/#!/developers/user-guide">here</a></li>
+</ul>
+</li>
+</ul>
+<h2>Download Genymotion</h2>
+<p>Register an account with <a href="https://www.genymotion.com/#!/auth/account-creation">Genymotion.com</a> and download the Free Genymotion emulator.
+<img alt="Figure 1: Genymotion" src="img/15.png">
+<img alt="Figure 2: Choose Genymotion for your platform" src="img/16.png"></p>
+<h2>Install on a Windows platform</h2>
+<p>Once downloaded, click on the uninstalled Genymotion app and step through the wizard.</p>
+<ul>
+<li>The following series of screenshots is indicative of the steps in installing on a Windows platform (collectively referred to as Figure 3):</li>
+</ul>
+<p><img alt="Figure 3: Installing on a Windows platform" src="img/genymotion_000.png"></p>
+<p><img alt="" src="img/genymotion_000.png">
+<img alt="" src="img/genymotion_001.png">
+<img alt="" src="img/genymotion_002.png">
+<img alt="" src="img/genymotion_003.png">
+<img alt="" src="img/genymotion_004.png">
+<img alt="" src="img/genymotion_006.png">
+<img alt="" src="img/genymotion_007.png">
+<img alt="" src="img/genymotion_008.png">
+<img alt="" src="img/genymotion_009.png">
+<img alt="" src="img/genymotion_010.png">
+<img alt="" src="img/genymotion_011.png">
+<img alt="" src="img/genymotion_012.png">
+<img alt="" src="img/genymotion_013.png">
+<img alt="" src="img/genymotion_014.png"></p>
+<p>Finally, you may be prompted to add a new virtual device as indicated in Figure 4: press the No button.
+<img alt="Figure 4: Do not add a new virtual device" src="img/genymotion_015.png"></p>
+<h3>Installing on an OSX (Mac) platform</h3>
+<ul>
+<li>
+<p>Download and install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (if it is not already installed).</p>
+<ul>
+<li>A User Manual is also available on the VirtualBox download page.</li>
+</ul>
+</li>
+<li>
+<p>Double click on the downloaded dmg installer file file (example <em>genymotion-2.2.2.dmg</em>).</p>
+<ul>
+<li>Drag the Genymotion icon (at the left in Figure 4) to the Applications folder (see Figure 5).</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 5: Installing genymotion on OSX (Mac) platform" src="img/17.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="04">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Genymotion plugin</h1>
+<p>Note that what are referred to as Preferences on the Mac in Android Studio are Settings on Windows. These are different names for essentially the same window.</p>
+<table>
+<thead>
+<tr>
+<th>- Figure 1 is a screenshot from a Windows 10 install in which Settings is accessed from the menu File</th>
+<th>Settings command (Ctrl-Alt-S).</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>This step briefly describes how to:</p>
+<ul>
+<li>Install Genymotion plugin in Android Studio.<ul>
+<li>This emulator could substitute for an actual mobile device during development.</li>
+</ul>
+</li>
+<li>Create a new virtual device within Genymotion.</li>
+</ul>
+<p>Here is a brief instruction set on how to install the plugin:</p>
+<ul>
+<li>Open Android Studio preferences (Mac) or settings (Windows).</li>
+</ul>
+<p><img alt="Figure 1 (Win) Settings | Plugin" src="img/025.png"></p>
+<p><img alt="Figure 2 (Mac) Preferences | Plugin" src="img/09.png"></p>
+<ul>
+<li>Select Plugins in left navigation bar.</li>
+<li>Search for Genymotion plugin (Figure 3).</li>
+</ul>
+<p><img alt="Figure 3: Search for Genymotion Plugin" src="img/10.png"></p>
+<ul>
+<li>Browse to locate plugin, install plugin, shut down and restart Android Studio (Figure 4).</li>
+</ul>
+<p><img alt="Figure 4: Install Genymotion Plugin" src="img/11.png"></p>
+<ul>
+<li>When Studio reopens, click on the Genymotion icon (Figure 5).</li>
+</ul>
+<p><img alt="Figure 5: Browse to locate Genymotion application" src="img/12.png"></p>
+<ul>
+<li>Select path to Genymotion app:<ul>
+<li>Windows: C:\Program Files\Genymobile\Genymotion (Figure 6)</li>
+<li>Mac: /Applications/Genymotion.app (Figure 7)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 6: Windows - Select path to Genymotion application" src="img/19.png">
+<img alt="Figure 7: Mac - Select path to Genymotion application" src="img/18.png"></p>
+<ul>
+<li>Once the Genymotion path has been inserted click on the (red) Genymotion toolbar button again. This launches the Genymotion Device Manager as shown in Figure 8.</li>
+</ul>
+<p><img alt="Figure 8: Start Genymotion Device Manager" src="img/20.png"></p>
+<ul>
+<li>Click the New button in the Genymotion Device manager.</li>
+<li>The Virtual device creation wizard should now open as shown in Figure 9.</li>
+</ul>
+<p><img alt="Figure 9: Setting up a Genymotion virtual device" src="img/19b.png"></p>
+<ul>
+<li>Select <em>Google Nexus 4 - 4.3 - API 18-768x1280</em></li>
+<li>Click the Next button. </li>
+<li>The virtual device properties are then displayed. See Figure 10.</li>
+</ul>
+<p><img alt="Figure 10: Virtual device properties" src="img/19a.png"></p>
+<ul>
+<li>Click Next to retrieve and deploy the new virtual device.</li>
+<li>The response should be as shown in Figure 11.</li>
+</ul>
+<p><img alt="Figure 11: Genymotion virtual device successfully created" src="img/21.png"></p>
+<ul>
+<li>Once the screen in Figure 11 appears, press the Finish button. </li>
+<li>The Genymotion virtual device should then be displayed as depicted in Figure 12.</li>
+</ul>
+<p><img alt="Figure 12: Google Nexus 4-4.3-API 18-768x1280 virtual device" src="img/028.png"></p>
+<ul>
+<li>
+<p>Select the virtual device and press the Start button shown in Figure 12.</p>
+</li>
+<li>
+<p>Genymotion emulator should then launch (Figure 13).</p>
+</li>
+</ul>
+<p><img alt="Figure 13: Genymotion emulator" src="img/14.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="05">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Install app on Genymotion</h1>
+<p>Install and test the default app on the Genymotion emulator as shown in following figures.</p>
+<ul>
+<li>Click on the Genymotion toolbar icon (as shown in Figure 4 in the previous step).</li>
+</ul>
+<p><img alt="Figure 1: Select virtual device, and press Start to launch" src="img/genymotion_020.png"></p>
+<p>Now, in addition to the built-in emulator, Genymotion is available:</p>
+<p><img alt="Figure 2: Select Genymotion emulator on which to install the app" src="img/genymotion_021.png"></p>
+<p><img alt="Figure 3: App runs on Genymotion emulator" src="img/genymotion_022.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="06">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Android physical device</h1>
+<p>This step applies only to those who may intend using an external device such as an Android phone or tablet.</p>
+<ul>
+<li>It also applies to the default app we have just developed. More sophisticated apps will likely require alterations to the build.gradle file provided below.</li>
+</ul>
+<p>Connect the device to your computer using a suitable USB cable.</p>
+<p>The following apply to a Prestigio MultiPhone PAPO3540 DUO and is not to be taken as applicable to all Android devices.</p>
+<ul>
+<li>This device runs on  platform Android 4.1.2 (API 16).</li>
+<li>This requires that the app build.gradle file is appropriately configured as exemplified in the code below.</li>
+<li>It also requires an appropriate platform installation as shown in Figure 1.</li>
+</ul>
+<pre><code>apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion &quot;22.0.1&quot;
+
+    defaultConfig {
+        applicationId &quot;app.donation&quot;
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName &quot;1.0&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+}
+</code></pre>
+
+<p><img alt="Figure 1: Standalone SDK Manager - Platform installation" src="img/76.png"></p>
+<h2>For Mac developers</h2>
+<p>When you first make a connection you may be presented with a message along the following lines, depending on the software on and the model of your phone:</p>
+<p><em>Attention
+Unable to find software on your PC that can recognise your device.
+Service pack 3, Windows Media Player, version 11 or higher or USB driver for Windows or Android file transfer for Mac OS must be installed (see www.microsoft.com or www.android.com/filetransfer)</em>.</p>
+<p>When you open <em>www.android.com/filetransfer</em> you will be presented with a screen somewhat similar to that shown in Figure 2:</p>
+<p><img alt="Figure 2: Android file transfer" src="img/genymotion_016.png"></p>
+<p>Download and install the file <em>androidfiletransfer.dmg</em>:</p>
+<p><img alt="Figure 3: Download and install androidfiletransfer.dmg" src="img/genymotion_017.png"></p>
+<h2>Installation on Android physical device</h2>
+<p>The following is applicable to deploying from Mac or Windows</p>
+<ul>
+<li>On your phone, open settings locate and Developer options. Then enable (tick) checkboxes:</li>
+<li>USB debugging </li>
+<li>Allow mock locations</li>
+</ul>
+<p>Some phones, such as Samsung Galaxy models, may hide the USB debugging option in which case it will be necessary to check the documentation or online forums to discover how to expose this feature.</p>
+<ul>
+<li>For example,in the case of Samsung Galaxy III, open Settings | More | About and click a number of times on the Build number. Some feedback is provided as you click.  The developer mode where USB debugging should then be revealed and may be found under More | System manager.</li>
+</ul>
+<p>Still on settings, and where such option available:</p>
+<ul>
+<li>Enable NFC (allow data exchange when device touches another device).</li>
+</ul>
+<p>You should receive a notification:</p>
+<ul>
+<li>Connected as a media device which indicates that you may now install an application directly from your computer.</li>
+</ul>
+<p>In Android Studio import Donation, MyRent or any other functioniong app of your choice and run the menu command <em>Run | Run 'app'</em>:</p>
+<p><img alt="Figure 4: Launch the app" src="img/70.png">.</p>
+<p>The <strong>Android Device Chooser</strong> window should open, displaying the connected android phone:</p>
+<p><img alt="Figure 5: Android phone attached" src="img/genymotion_019.png"></p>
+<p>Select the device, in this case <em>Prestigio PAP3540DUO</em> and press OK.</p>
+<ul>
+<li>After a few moments the application should install and launch on your phone.</li>
+</ul>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="07">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Setup summary</h1>
+<p><img alt="" src="img/28.png"></p>
+</div>
+<script>
+$('.ui.menu .item')
+  .tab({
+    history: true,
+    historyType: 'hash'
+  })
+;
+</script>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  Eamonn de Leastar (edeleastar@tssg.wit.ie) & John Fitzgerald (johnjfitzgerald@outlook.com). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>    <script>
+
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+})    </script>
+
+  </body>
+ </html>

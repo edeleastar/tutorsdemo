@@ -1,0 +1,305 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+  <div class="ui container">
+<style>
+
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+</style>
+
+
+<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+  <header class="header item">
+    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
+    1: Overview & Tools
+  </header>
+
+  <a class="active item" data-tab="Android-Tools-02"> Android-Tools-02 </a>
+    <a class="item" data-tab="01"> 01 </a>
+    <a class="item" data-tab="02"> 02 </a>
+    <a class="item" data-tab="03"> 03 </a>
+    <a class="item" data-tab="05"> 05 </a>
+</div>
+
+<div class="ui bottom attached  active tab segment lab" data-tab="Android-Tools-02">
+  <div class "ui segment">
+    <br>
+  </div>
+  <h1>Objectives</h1>
+<p>In this lab we shall introduce more advanced tools. We provide a customized set of styles applicable to HTML and Java source code. We demonstrate how to use the standalone SDK Manager to import additional packages or delete existing packages. Android Studio possesses a virtual device (AVD) on which the apps you develop may be installed and tested. We briefly discuss this. Simple instructions are provided on how to deploy your apps on a physical phone during development. Finally, a number of sample applications are provided that you may install on Genymotion by simply dragging and dropping onto the virtual device.</p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="01">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Code Styling</h1>
+<p>The Android Studio default configuration includes a section dealing with code styling. This refers to such features as the number of spaces used in indentation, the positioning of curly braces - for example is the opening brace inline or on the next line - and so on.</p>
+<p>The default code styling does not really match our requirements and therefore we have provided a customized styling jar. Our customized scheme has made changes to both Java and HTML styling. The following describes how to replace the default styling with this customized version.</p>
+<p>We begin introducing the customized styling by first accessing the Default Preferences pane, that may be opened from within Android Studio Preferences.</p>
+<p><img alt="Figure 1: Default Preferences with customized ICTSkills scheme selected" src="img/50.png"></p>
+<p>Import this scheme as follows:</p>
+<ul>
+<li>Ensure that the <em>Default Preferences</em> window is closed.</li>
+<li>Download <a href="archives/android-studio-settings.jar">customized scheme jar file</a> and save to a temporary location.</li>
+<li>Select Configure as shown in Figure 2.</li>
+</ul>
+<p><img alt="Figure 2: Welcome to Android Studio - Configure" src="img/51.png"></p>
+<ul>
+<li>Select Import Setting as shown in Figure 3.</li>
+</ul>
+<p><img alt="Figure 3: Welcome to Android Studio - Import Settings" src="img/52.png"></p>
+<ul>
+<li>Browse to the location where you have saved the settings jar file.</li>
+<li>Select the file and press Choose. See Figure 4.</li>
+</ul>
+<p><img alt="Figure 4: Import settings file" src="img/53.png"></p>
+<ul>
+<li>In the <em>Select Components to Import</em> window select only <em>Code Style</em> as shown in Figure 5.</li>
+</ul>
+<p><img alt="Figure 5: Select only Code Style" src="img/54.png"></p>
+<ul>
+<li>Press OK in the <em>Restart Needed</em> window.</li>
+</ul>
+<p><img alt="Figure 6: Press OK, shut down and restart Android Studio" src="img/55.png"></p>
+<p>This styling will now be applied to any new projects you create.</p>
+<p>You may reformat any existing projects with this newly imported style as follows:</p>
+<ul>
+<li>In the project tool window, select module or directory to which you want to apply your reformatting.</li>
+<li>From the main menu, select Code | Reformat Code (or press ⌥ ⌘ L on a Mac).</li>
+<li>Alternatively, in the Android tool window, as shown in Figure 7, right-click the app directory and from the context menu and select Reformat Code.
+-In the Reformat Code dialog box accept the default settings for reformatting, as shown in Figure 8, and click Run.</li>
+</ul>
+<p><img alt="Figure 7: Reformat using imported style" src="img/56.png"></p>
+<p><img alt="Figure 8: Accept defaults" src="img/57.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="02">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Android Virtual Device (AVD)</h1>
+<p>The following screenshots show how to launch the Android Virtual Device (AVD) manager, delete an existing AVD and replace with a more suitable one:</p>
+<p><img alt="Figure:  Open Android Virtual Device (AVD) Manager" src="img/30.png"><br><br>
+<img alt="Figure:  View default AVD" src="img/31.png"><br><br>
+<img alt="Figure:  Delete existing AVD" src="img/32.png"><br><br>
+<img alt="Figure:  Select a new AVD" src="img/33.png"><br><br>
+<img alt="Figure: Google Nexus 4 chosen" src="img/34.png">
+<img alt="Figure: Accept default AVD name - Nexus API 22" src="img/35.png">
+<img alt="Figure: Device created and ready for use" src="img/36.png"></p>
+<p>Run an app on the newly created AVD, for example Hello ICTSkills and select the virtual device (emulator) on which to install the app:</p>
+<p><img alt="Figure: On launching app new AVD now available in addition to Genymotion" src="img/37.png">
+<img alt="Figure: Hello ICTSkills app installed and running on Nexus AVD" src="img/38.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="03">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>SDK Manager</h1>
+<p>This step illustrates use of the SDK Manager. It provided for reference only at this stage: you are recommended not to install or delete packages only when necessary.</p>
+<ul>
+<li>
+<p>The Android SDK Manager may be used to add or delete packages from your sdk install. These packages may be summarised as follows:</p>
+<ul>
+<li>SDK Tools <ul>
+<li>included by default when Android Studio installed earlier</li>
+</ul>
+</li>
+<li>SDK Platform-tools <ul>
+<li>a default package will be present.</li>
+</ul>
+</li>
+<li>SDK Platform<ul>
+<li>At least one platform required.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You may launch the SDK manager  Android Studio in a number of ways. Here's one approach:</p>
+<ul>
+<li>Open an existing project, for example Hello ICTSkills.</li>
+<li>Click on the SDK manager icon in the toolbar.
+<img alt="Figure 1: Open SDK manager using toolbar icon" src="img/06.png"></li>
+</ul>
+<p>This opens the Default Preferences window. This window has three tabbed windows:</p>
+<ul>
+<li>SDK Platforms (Figure 2)</li>
+<li>SDK Tools (Figure 3)</li>
+<li>SDK Update Sites (Figure 4)</li>
+</ul>
+<p><img alt="Figure 2: Default Preferences displays SDK Platforms - first tabbed window" src="img/45.png">
+<img alt="Figure 3: SDK Tools" src="img/46.png">
+<img alt="Figure 4: SDK Update Sites" src="img/47.png"></p>
+<p>Click on the link <em>SDK Standalone SDK Manager</em> located at the foot of the Default Preferences window.</p>
+<ul>
+<li>The manager should launch and present something like that shown in Figure 5, in which you are invited to install 15 packages. Do <strong>NOT</strong> accept this invitation.</li>
+</ul>
+<p><img alt="Figure 5: Standalone SDK Manager" src="img/48.png"></p>
+<ul>
+<li>You may inspect already installed packages by unticking <em>Updates/New</em> checkbox and ticking <em>Installed</em> checkbox. See Figure 6 for an example.</li>
+</ul>
+<p><img alt="Figure 6: Installed packages" src="img/49.png"></p>
+<ul>
+<li>All available packages excluding those already installed may be viewed by ticking <em>Updates/New</em> and unticking <em>Installed</em> checkboxes. <br><br></li>
+</ul>
+<p><img alt="Figure 7: All available packages excluding those already installed" src="img/44.png"></p>
+<ul>
+<li>
+<p>Check that the Intel x86 Emulator Accelertor (HAXM installer) is also installed (as shown in Figure 8)</p>
+<ul>
+<li>
+<p>HAXM will improve the performance of the Android Virtual Device (AVD) - the emulator included in the Android Studio install. This may otherwise be too slow to be of practical use. In any event, preference will be given to the use of the third party emulator, Genymotion.</p>
+</li>
+<li>
+<p>If you intend using the AVD then you are recommended to consult the <a href="https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager">Intel documentation</a> to determine compatibilty with your system.</p>
+</li>
+<li>
+<p>Additionally, on Windows it may be necessary to separately install HAXM, downloadable <a href="https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement">here</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Figure 8: HAXM accelerator already installed" src="img/43.png"></p>
+</div>
+<div class="ui bottom attached tab  segment lab" data-tab="05">
+    <div class "ui segment">
+    <br>
+  </div>
+  <h1>Sample Android apps</h1>
+<p>Download the following apps from the local achive to a temporary folder and, in turn, drag and drop each onto the GenyMotion emulator.</p>
+<ul>
+<li>This will install the apps on the virtual device.</li>
+</ul>
+<p><img alt="Figure 1: Drag and drop ap file to install app on Genymotion virtual device" src="img/27.png"></p>
+<ul>
+<li>
+<p><a href="archives/donation-android.apk">Donation</a></p>
+</li>
+<li>
+<p><a href="archives/MyRentV07.apk">MyRentV07</a></p>
+</li>
+<li>
+<p><a href="archives/SunshineFinal.apk">Sunshine</a></p>
+</li>
+<li>
+<p><a href="archives/CriminalIntent.apk">CriminalIntent</a></p>
+</li>
+</ul>
+<p>Launch the apps and experiment with their functionality.</p>
+</div>
+<script>
+$('.ui.menu .item')
+  .tab({
+    history: true,
+    historyType: 'hash'
+  })
+;
+</script>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  Eamonn de Leastar (edeleastar@tssg.wit.ie) & John Fitzgerald (johnjfitzgerald@outlook.com). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>    <script>
+
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+})    </script>
+
+  </body>
+ </html>
