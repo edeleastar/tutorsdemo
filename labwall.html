@@ -47,226 +47,177 @@ figcaption
   <body>
 
   <div class="ui container">
-  <header class="ui middle aligned grid">
-    <div class="eight wide column">
-      <h2>
-        <a href="index.html"> <i class="chevron left icon"></i> </a> Android Application Development <small> (Labs) </small>
-      </h2>
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <a class="ui blue left corner label">
+      <i class="lab big  icon"></i>
+    </a>
+    <div class="eight wide center aligned column">
+      <h2 class="headder">    Android Application Development </h2>
     </div>
-     <div class="two wide column grid">
-       <div class="row">
-         <a href="talkwall.html" class="fluid ui tiny red basic button">Presentations</a>
-       </div>
-       <div class="row">
-         <a href="labwall.html" class="fluid ui tiny blue basic button">Labs</a>
-       </div>
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="index.html"> <i class="big sitemap icon"></i>  topics </a>
+      </div>
     </div>
-    <div class="six wide column">
-      <img class="ui image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="talkwall.html"> <i class="big film icon"></i>  slides </a>
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="labwall.html"> <i class="big lab icon"></i> labs </a>
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
     </div>
   </header>
 
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
 
-<div class="ui link cards">
-      <div class="ui card">
+
+<div class="ui four doubling stackable cards">
+      <a class="ui card" href="topic01-overview-and-tools/book-a-android-tools-01/index.html">
     <div class="content">
-      <a class="header" href="topic01-overview-and-tools/book-a-android-tools-01/index.html"> Android-Tools-01 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Android-Tools-01 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic01-overview-and-tools/book-a-android-tools-01/index.html">
-        <img src="topic01-overview-and-tools/book-a-android-tools-01/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic01-overview-and-tools/book-a-android-tools-01/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Here we discuss how to install and set up effective tools for Android application development. These include the Android Studio IDE  + an emulator. The emulator we hope to use - Genymotion - is a third party application not strictly part of the android build tools. Optionally, in some cases, we may use an emulator that is included as part of Android Studio installation although this may prove significantly slower than Genymotion. It may not be possible to use an emulator in some environments and in such cases it shall be necessary to test on a physical device such as a phone or tablet.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic01-overview-and-tools/book-b-donation-01/index.html">
     <div class="content">
-      <a class="header" href="topic01-overview-and-tools/book-b-donation-01/index.html"> Donation-01 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Donation-01 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic01-overview-and-tools/book-b-donation-01/index.html">
-        <img src="topic01-overview-and-tools/book-b-donation-01/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic01-overview-and-tools/book-b-donation-01/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Here we proceed to explore in detail the creating of a simple activity class + the associated layout. This process will seem quite complex on first contact - but as we proceed through the labs over the next few sessions the deep structure should start to emerge.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic01-overview-and-tools/book-c-android-tools-02/index.html">
     <div class="content">
-      <a class="header" href="topic01-overview-and-tools/book-c-android-tools-02/index.html"> Android-Tools-02 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Android-Tools-02 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic01-overview-and-tools/book-c-android-tools-02/index.html">
-        <img src="topic01-overview-and-tools/book-c-android-tools-02/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic01-overview-and-tools/book-c-android-tools-02/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>In this lab we shall introduce more advanced tools. We provide a customized set of styles applicable to HTML and Java source code. We demonstrate how to use the standalone SDK Manager to import additional packages or delete existing packages. Android Studio possesses a virtual device (AVD) on which the apps you develop may be installed and tested. We briefly discuss this. Simple instructions are provided on how to deploy your apps on a physical phone during development. Finally, a number of sample applications are provided that you may install on Genymotion by simply dragging and dropping onto the virtual device.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic02-activities-and-layouts/book-a-donation-02/index.html">
     <div class="content">
-      <a class="header" href="topic02-activities-and-layouts/book-a-donation-02/index.html"> Donation-02 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Donation-02 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic02-activities-and-layouts/book-a-donation-02/index.html">
-        <img src="topic02-activities-and-layouts/book-a-donation-02/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic02-activities-and-layouts/book-a-donation-02/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Introduce a second screen to display the list of donations made by the user. In addition, enable our app its first "Model" objects, which will be used to store the individual donations made by the user. </p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic03-navigation-and-app-structure/book-a-donation-03/index.html">
     <div class="content">
-      <a class="header" href="topic03-navigation-and-app-structure/book-a-donation-03/index.html"> Donation-03 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Donation-03 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic03-navigation-and-app-structure/book-a-donation-03/index.html">
-        <img src="topic03-navigation-and-app-structure/book-a-donation-03/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic03-navigation-and-app-structure/book-a-donation-03/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>We continue the implementation of Donation to including the welcome, sign up and login. Support these views with a User model, and validate the users on log in. Continue to build on your Donation repository.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic03-navigation-and-app-structure/book-b-myrent-00/index.html">
     <div class="content">
-      <a class="header" href="topic03-navigation-and-app-structure/book-b-myrent-00/index.html"> MyRent-00 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-00 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic03-navigation-and-app-structure/book-b-myrent-00/index.html">
-        <img src="topic03-navigation-and-app-structure/book-b-myrent-00/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic03-navigation-and-app-structure/book-b-myrent-00/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>We start a new application in this lab, which will be succeeded by numerous version over the next few topics. In the first lab the focus is on explaining the essential 'plumbing' of the app, and introducing the first Interface based listener you may have encountered.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic03-navigation-and-app-structure/book-c-myrent-01/index.html">
     <div class="content">
-      <a class="header" href="topic03-navigation-and-app-structure/book-c-myrent-01/index.html"> MyRent-01 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-01 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic03-navigation-and-app-structure/book-c-myrent-01/index.html">
-        <img src="topic03-navigation-and-app-structure/book-c-myrent-01/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic03-navigation-and-app-structure/book-c-myrent-01/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>In this version of MyRent, we introduce a range of UI Widgets to evolve the UX into something more useful. These widgets will be 'active', meaning that the host Activity will be intercepting and responding to events the user may generate when interacting with the application.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic04-widgets-and-events/book-a-myrent-02/index.html">
     <div class="content">
-      <a class="header" href="topic04-widgets-and-events/book-a-myrent-02/index.html"> MyRent-02 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-02 </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic04-widgets-and-events/book-a-myrent-02/index.html">
-        <img src="topic04-widgets-and-events/book-a-myrent-02/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic04-widgets-and-events/book-a-myrent-02/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Our current version of MyRent (V01) only permits a single Residence to be entered. In this lab we seek to manage a list of residences. To do this we need to extend the model by including a new class - 'Portfolio' - to manage all our residences. We will also need a new Activity - ResidenceListActivity - to display the full portfolio of residences.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="topic04-widgets-and-events/book-b-event-handling/index.html">
     <div class="content">
-      <a class="header" href="topic04-widgets-and-events/book-b-event-handling/index.html"> Event-Handling </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Event-Handling </div>
     </div>
-    <div class="image">
-      <a class="image" href="topic04-widgets-and-events/book-b-event-handling/index.html">
-        <img src="topic04-widgets-and-events/book-b-event-handling/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="topic04-widgets-and-events/book-b-event-handling/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>This is a short lab whose aim is to provide a detailed explanation of event handling via a simple standalone non-android application</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-</div>1
+</div>
    </div>
 
 

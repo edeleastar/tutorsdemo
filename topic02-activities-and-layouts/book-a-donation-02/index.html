@@ -81,38 +81,58 @@ h3
 
 </style>
 
-
-<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+<div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
-    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
-    2: Activities & Layouts
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      2: Activities & Layouts
+    </a>
   </header>
-
-  <a class="active item" data-tab="Donation-02"> Donation-02 </a>
-    <a class="item" data-tab="01"> 01 </a>
-    <a class="item" data-tab="02"> 02 </a>
-    <a class="item" data-tab="03"> 03 </a>
-    <a class="item" data-tab="04"> 04 </a>
-    <a class="item" data-tab="05"> 05 </a>
-    <a class="item" data-tab="06"> 06 </a>
-    <a class="item" data-tab="07"> 07 </a>
-    <a class="item" data-tab="08"> 08 </a>
-    <a class="item" data-tab="09"> 09 </a>
-    <a class="item" data-tab="Exercises"> Exercises </a>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Donation-02">
+        Donation-02
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+      <a class="item" data-tab="08">
+        08
+      </a>
+      <a class="item" data-tab="09">
+        09
+      </a>
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
+    </div>
 </div>
 
-<div class="ui bottom attached  active tab segment lab" data-tab="Donation-02">
-  <div class "ui segment">
-    <br>
-  </div>
-  <h1>Objectives</h1>
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="Donation-02">
+    <h1>Objectives</h1>
 <p>Introduce a second screen to display the list of donations made by the user. In addition, enable our app its first "Model" objects, which will be used to store the individual donations made by the user. </p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="01">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Donation-01 Solutions</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Donation-01 Solutions</h1>
 <p>In this lab we shall all work on the NUC platform. </p>
 <ul>
 <li>
@@ -192,12 +212,9 @@ git config -l &lt;------ execute this command to check
 </ul>
 <p><img alt="Figure 2: Configure git VCS" src="img/11.png"></p>
 <p>Once you have opened the project in Android Studio you are ready to proceed with the lab, the first part of which is to provide solutions to the exercises at the end of Donation-01.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="02">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Package Name</h1>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Package Name</h1>
 <p>This version is a little misconfigured - we have a leftover - the package name 'com.example.donation' form the project generation wizard.<br> 
 This can be changed as follows:</p>
 <ul>
@@ -237,12 +254,9 @@ public class Donate extends AppCompatActivity
 </ul>
 <p>Here is the revised structure:
 <img alt="Figure 6: Revised structure" src="img/21.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="03">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Menu</h1>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Menu</h1>
 <p>Open <code>res/values/Strings.xml</code> and introduce a new String resource like this:</p>
 <pre><code class="xml">    &lt;string name=&quot;menuReport&quot;&gt;Report&lt;/string&gt;
 </code></pre>
@@ -273,12 +287,9 @@ public class Donate extends AppCompatActivity
 
 <p>Run the app and when you press the menu button (or the overflow menu) and select 'Report', you should see the toast message appear.</p>
 <p><img alt="" src="img/05.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="04">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Reports Activity</h1>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Reports Activity</h1>
 <p>Before we start to design a new activity, Add a string resource in <code>res/values/strings.xml</code>:</p>
 <pre><code>&lt;string name=&quot;reportTitle&quot;&gt;Report&lt;/string&gt;
 </code></pre>
@@ -412,12 +423,9 @@ public class Report extends Activity
 <p>Note the location of the new element.</p>
 <p>Try it all now - it should load. Here is an example using the inbuilt emulator (AVD).</p>
 <p><img alt="Figure 2: Report rendered on Android AVD" src="img/06.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="05">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Application Object</h1>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Application Object</h1>
 <p>In order to keep out application design coherent, we now bring in an 'Application' object.</p>
 <p>Create a new class called `DonationApp':</p>
 <p><img alt="" src="img/33.png"></p>
@@ -474,12 +482,9 @@ public class DonationApp extends Application
 <p><img alt="" src="img/08.png"></p>
 <p>The filter used here is:</p>
 <p><img alt="" src="img/34.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="06">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Donation Model</h1>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Donation Model</h1>
 <p>Create a new class called <code>Donation</code>:</p>
 <pre><code class="java">package app.donation;
 
@@ -538,12 +543,9 @@ public class DonationApp extends Application
 </code></pre>
 
 <p>It manages a list of donations. It also centralises the 'makeDonation' as as a method. </p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="07">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Refactored Donate</h1>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>Refactored Donate</h1>
 <p>The Donate activity can now be completely re factored to make use of the DonationApp object.</p>
 <p>First, introduce this new member into the class:</p>
 <pre><code>  private DonationApp app;
@@ -670,12 +672,9 @@ public class Donate extends AppCompatActivity
   }
 }
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="08">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Refactored Report</h1>
+  <div  class="ui tab segment lab" data-tab="08">
+    <h1>Refactored Report</h1>
 <p>We now rework Report to render the actual donations - held in the DonationApp list.</p>
 <p>First some layout additions. Include these new string in strings.xml</p>
 <pre><code>    &lt;string name=&quot;defaultAmount&quot;&gt;00&lt;/string&gt;
@@ -785,12 +784,9 @@ class DonationAdapter extends ArrayAdapter&lt;Donation&gt;
 
 <p>We will discuss this version in depth in class</p>
 <p>If all goes well - then you should be able to make donations, and and the see a list of these in the report activity.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="09">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Repository</h1>
+  <div  class="ui tab segment lab" data-tab="09">
+    <h1>Repository</h1>
 <p>Here we shall describe how you can break the association with GitHub that you established to download the baseline <em>donation-android-2015</em> and push your refactored application to a new repository that you will create on your Bitbucket account.</p>
 <p>Access your Bitbucket account and create a repository named <em>donation-android-2015</em></p>
 <ul>
@@ -837,12 +833,9 @@ git push -u origin --tags
 <ul>
 <li>This will pull the latest commit of donation-android-2015.</li>
 </ul>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="Exercises">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Exercises</h1>
+  <div  class="ui tab segment lab" data-tab="Exercises">
+    <h1>Exercises</h1>
 <p>Project so far:</p>
 <ul>
 <li>
@@ -901,7 +894,7 @@ git push -u origin --tags
 <p>Introduce a 'User' into the models package to represent the user in the usual way. Maintain a list of Users in the DonationApp object. Whenever anyone registers, then create a new User object in this list.</p>
 <h2>Exercise 9</h2>
 <p>Implement the Login activity, to now only let users in to Donate if they are registered (i.e. a matching email + password in the list of users maintained by DonationApp)</p>
-</div>
+  </div>
 <script>
 $('.ui.menu .item')
   .tab({

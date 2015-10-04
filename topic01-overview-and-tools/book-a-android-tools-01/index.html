@@ -81,35 +81,49 @@ h3
 
 </style>
 
-
-<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+<div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
-    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
-    1: Overview & Tools
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      1: Overview & Tools
+    </a>
   </header>
-
-  <a class="active item" data-tab="Android-Tools-01"> Android-Tools-01 </a>
-    <a class="item" data-tab="01"> 01 </a>
-    <a class="item" data-tab="02"> 02 </a>
-    <a class="item" data-tab="03"> 03 </a>
-    <a class="item" data-tab="04"> 04 </a>
-    <a class="item" data-tab="05"> 05 </a>
-    <a class="item" data-tab="06"> 06 </a>
-    <a class="item" data-tab="07"> 07 </a>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Android-Tools-01">
+        Android-Tools-01
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+    </div>
 </div>
 
-<div class="ui bottom attached  active tab segment lab" data-tab="Android-Tools-01">
-  <div class "ui segment">
-    <br>
-  </div>
-  <h1>Objectives</h1>
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="Android-Tools-01">
+    <h1>Objectives</h1>
 <p>Here we discuss how to install and set up effective tools for Android application development. These include the Android Studio IDE  + an emulator. The emulator we hope to use - Genymotion - is a third party application not strictly part of the android build tools. Optionally, in some cases, we may use an emulator that is included as part of Android Studio installation although this may prove significantly slower than Genymotion. It may not be possible to use an emulator in some environments and in such cases it shall be necessary to test on a physical device such as a phone or tablet.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="01">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Android Studio &amp; SDK Tools</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Android Studio &amp; SDK Tools</h1>
 <p>These steps describe how to download and install Android Studio &amp; bundled SDK Tools:</p>
 <ul>
 <li>
@@ -172,12 +186,9 @@ exit 0
 <img alt="Figure 15: Components being downloaded" src="img/012.png">
 <img alt="Figure 16: All components downloaded" src="img/013.png">
 <img alt="Figure 17: Welcome screen presenting range of options" src="img/014.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="02">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Your First Android App</h1>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Your First Android App</h1>
 <p>To create your first Android app launch Android Studio and follow the sequence of steps in the figures below:</p>
 <p><img alt="Figure 1: Start a new Android Studio project" src="img/014a.png"></p>
 <p>In Figure 2 you will be asked for your Company Domain. The purpose of this is to facilitate compliance with the <a href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">Java package naming convention</a>. Here, in this lab, we provide a fictitious domain.</p>
@@ -214,12 +225,9 @@ exit 0
 <img alt="Figure 12: Confirmation the emulator software is running in accelerated mode" src="img/72.png">
 <img alt="Figure 13: Confirmation emulator has launched" src="img/73.png">
 <img alt="Figure 14: Emulator brought into view displaying default text - Hello world!" src="img/022.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="03">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Genymotion emulator installation</h1>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Genymotion emulator installation</h1>
 <p>During development of an Android application it is necessary to compile and run the app many times. The app may be tested by installing and running it on a physical device, such as an Android phone or tablet. But the app may also be run on a virtual device or emulator. In this course we shall have a choice of two emulators, Genymotion and Android Virtual Device (AVD). </p>
 <ul>
 <li>Genymotion is produced by a third party and includes a free version for personal use. Our experience to date is that it is orders of magnitude faster than AVD and consequently it is our intention to use this in preference to AVD. </li>
@@ -278,12 +286,9 @@ exit 0
 </li>
 </ul>
 <p><img alt="Figure 5: Installing genymotion on OSX (Mac) platform" src="img/17.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="04">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Genymotion plugin</h1>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Genymotion plugin</h1>
 <p>Note that what are referred to as Preferences on the Mac in Android Studio are Settings on Windows. These are different names for essentially the same window.</p>
 <table>
 <thead>
@@ -364,12 +369,9 @@ exit 0
 </li>
 </ul>
 <p><img alt="Figure 13: Genymotion emulator" src="img/14.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="05">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Install app on Genymotion</h1>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Install app on Genymotion</h1>
 <p>Install and test the default app on the Genymotion emulator as shown in following figures.</p>
 <ul>
 <li>Click on the Genymotion toolbar icon (as shown in Figure 4 in the previous step).</li>
@@ -378,12 +380,9 @@ exit 0
 <p>Now, in addition to the built-in emulator, Genymotion is available:</p>
 <p><img alt="Figure 2: Select Genymotion emulator on which to install the app" src="img/genymotion_021.png"></p>
 <p><img alt="Figure 3: App runs on Genymotion emulator" src="img/genymotion_022.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="06">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Android physical device</h1>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Android physical device</h1>
 <p>This step applies only to those who may intend using an external device such as an Android phone or tablet.</p>
 <ul>
 <li>It also applies to the default app we have just developed. More sophisticated apps will likely require alterations to the build.gradle file provided below.</li>
@@ -459,14 +458,11 @@ Service pack 3, Windows Media Player, version 11 or higher or USB driver for Win
 <ul>
 <li>After a few moments the application should install and launch on your phone.</li>
 </ul>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="07">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Setup summary</h1>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>Setup summary</h1>
 <p><img alt="" src="img/28.png"></p>
-</div>
+  </div>
 <script>
 $('.ui.menu .item')
   .tab({

@@ -81,38 +81,58 @@ h3
 
 </style>
 
-
-<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+<div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
-    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
-    3: Navigation & App Structure
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      3: Navigation & App Structure
+    </a>
   </header>
-
-  <a class="active item" data-tab="MyRent-00"> MyRent-00 </a>
-    <a class="item" data-tab="01"> 01 </a>
-    <a class="item" data-tab="02"> 02 </a>
-    <a class="item" data-tab="03"> 03 </a>
-    <a class="item" data-tab="04"> 04 </a>
-    <a class="item" data-tab="05"> 05 </a>
-    <a class="item" data-tab="06"> 06 </a>
-    <a class="item" data-tab="07"> 07 </a>
-    <a class="item" data-tab="08"> 08 </a>
-    <a class="item" data-tab="09"> 09 </a>
-    <a class="item" data-tab="10"> 10 </a>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="MyRent-00">
+        MyRent-00
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+      <a class="item" data-tab="08">
+        08
+      </a>
+      <a class="item" data-tab="09">
+        09
+      </a>
+      <a class="item" data-tab="10">
+        10
+      </a>
+    </div>
 </div>
 
-<div class="ui bottom attached  active tab segment lab" data-tab="MyRent-00">
-  <div class "ui segment">
-    <br>
-  </div>
-  <h1>Objectives</h1>
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="MyRent-00">
+    <h1>Objectives</h1>
 <p>We start a new application in this lab, which will be succeeded by numerous version over the next few topics. In the first lab the focus is on explaining the essential 'plumbing' of the app, and introducing the first Interface based listener you may have encountered.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="01">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Create Project</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Create Project</h1>
 <p>Click on <em>Start a new Android Studio project</em> on the Quick Start panel in the Welcome screen.</p>
 <ul>
 <li>Complete the wizard steps as shown in the following screenshots:</li>
@@ -198,12 +218,9 @@ git commit -m 'MyRent-00 (step 01): Baseline app built using Android Studio 1.3.
 <p><img alt="Figure 11: Launch Android SDK Manager" src="img/56.png"></p>
 <p>Figure 12 shows the lab module's build.gradle. Observe that the minSdkVersion is 16. The goal is that MyRent may be installed and run on phones from and including Jelly Bean version. Study the table <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">here</a> to get an appreciation of the relationship between platform version (example Android 4.1) and API level (example JELLY_BEAN).</p>
 <p><img alt="Figure 12: MyRent app build.gradle" src="img/58.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="02">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Layout XML</h1>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Layout XML</h1>
 <p>Some of the key files of the application are identified in the screenshot of the Project Files Tools Window as illustrated in Figure 1.</p>
 <p><img alt="Figure 1: Key Application Files" src="img/14.png"></p>
 <p><strong>Layout XML Code</strong></p>
@@ -261,12 +278,9 @@ The textual content of the file is as follows. </p>
 </li>
 </ul>
 <p><img alt="Figure 6: Screenshot of MyRent layout" src="img/08.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="03">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Strings</h1>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Strings</h1>
 <p>The file <em>strings.xml</em>, located in <em>res/values</em>, contains all the text that <em>MyRent</em> application uses.
 <img alt="Figure 1: Avoid hardcoding strings by locating in file strings.xml" src="img/22.png"></p>
 <p>This arrangement, rather than hard-coding strings when and where required in the code, greatly facilites any changes to the strings, such as for example in localization - adapting your application to a new language.</p>
@@ -286,12 +300,9 @@ The textual content of the file is as follows. </p>
 <p><img alt="Figure 4: AndroidManifest.xml" src="img/24.png">
 <img alt="Figure 5: res/layout/activity_myrent.xml" src="img/25.png">
 <img alt="Figure 6: res/menu/myrent.xml" src="img/26.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="04">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>R File</h1>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>R File</h1>
 <p>All auto-generated files are located in the <em>build</em> folder structure and should not be modified by the developer.</p>
 <ul>
 <li>BuildConfig.java contains a constant that allows one to run some code only in debug mode.</li>
@@ -307,12 +318,9 @@ The textual content of the file is as follows. </p>
 </li>
 </ul>
 <p><img alt="Figure 2: R File should not be edited by developer" src="img/28.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="05">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Java</h1>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Java</h1>
 <p><img alt="Figure 1: Java files location" src="img/29.png"></p>
 <p><strong>MyRentActivity</strong></p>
 <ul>
@@ -348,12 +356,9 @@ The textual content of the file is as follows. </p>
 <p><img alt="Figure 2: MyRentActivity.java" src="img/30.png"></p>
 <p><img alt="Figure 3: MyRent menu item on Action bar" src="img/31.png"></p>
 <p><img alt="Figure 4: Program halts at breakpoint on line 28 when menu selected" src="img/32.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="06">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Run App</h1>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Run App</h1>
 <p>This step only applies to those intending to use the Genymotion emulator.</p>
 <p><strong>Start the Genymotion emulator</strong></p>
 <ul>
@@ -397,12 +402,9 @@ The textual content of the file is as follows. </p>
 <p><img alt="Figure 3: Run application using menu command or toolbar" src="img/52.png">
 <img alt="Figure 4: Android Device Chooser - Select emulator on which to run app" src="img/53.png">
 <img alt="Figure 5: MyRent app running on Genymotion emulator" src="img/54.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="07">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Model</h1>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>Model</h1>
 <p>We first begin with a new model class: Residence.</p>
 <ul>
 <li>Create the file in the package <em>org.wit.myrent</em>.</li>
@@ -445,12 +447,9 @@ public class Residence
   }
 }
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="08">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Layout</h1>
+  <div  class="ui tab segment lab" data-tab="08">
+    <h1>Layout</h1>
 <p>A general note on layout development: Android Development Kit (ADK) provides two ways to to create a user interface (UI):</p>
 <ul>
 <li>
@@ -562,12 +561,9 @@ public class Residence
 
 <p><img alt="Figure 7: Using color in layout" src="img/34.png"></p>
 <p><img alt="Figure 8: Using color in layout" src="img/34a.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="09">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Listeners</h1>
+  <div  class="ui tab segment lab" data-tab="09">
+    <h1>Listeners</h1>
 <p>We shall now inject code into the MyRentActivity class that shall:</p>
 <ul>
 <li>Listen for changes to the Geolocation input control</li>
@@ -812,12 +808,9 @@ public class MyRentActivity extends AppCompatActivity implements TextWatcher
 }
 
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="10">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Summary</h1>
+  <div  class="ui tab segment lab" data-tab="10">
+    <h1>Summary</h1>
 <p>Here is what we have done in this topic:</p>
 <ul>
 <li>
@@ -846,7 +839,7 @@ public class MyRentActivity extends AppCompatActivity implements TextWatcher
 <p>Added a listener to the Activity class to capture any changes in input (the geolocation) and transmit these changes to the Residence object for storage.</p>
 </li>
 </ul>
-</div>
+  </div>
 <script>
 $('.ui.menu .item')
   .tab({

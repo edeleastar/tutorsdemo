@@ -81,38 +81,58 @@ h3
 
 </style>
 
-
-<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+<div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
-    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
-    4: Platform & Events
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      4: Platform & Events
+    </a>
   </header>
-
-  <a class="active item" data-tab="MyRent-02"> MyRent-02 </a>
-    <a class="item" data-tab="01"> 01 </a>
-    <a class="item" data-tab="02"> 02 </a>
-    <a class="item" data-tab="03"> 03 </a>
-    <a class="item" data-tab="04"> 04 </a>
-    <a class="item" data-tab="05"> 05 </a>
-    <a class="item" data-tab="06"> 06 </a>
-    <a class="item" data-tab="07"> 07 </a>
-    <a class="item" data-tab="08"> 08 </a>
-    <a class="item" data-tab="09"> 09 </a>
-    <a class="item" data-tab="10"> 10 </a>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="MyRent-02">
+        MyRent-02
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+      <a class="item" data-tab="08">
+        08
+      </a>
+      <a class="item" data-tab="09">
+        09
+      </a>
+      <a class="item" data-tab="10">
+        10
+      </a>
+    </div>
 </div>
 
-<div class="ui bottom attached  active tab segment lab" data-tab="MyRent-02">
-  <div class "ui segment">
-    <br>
-  </div>
-  <h1>ListView</h1>
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="MyRent-02">
+    <h1>ListView</h1>
 <p>Our current version of MyRent (V01) only permits a single Residence to be entered. In this lab we seek to manage a list of residences. To do this we need to extend the model by including a new class - 'Portfolio' - to manage all our residences. We will also need a new Activity - ResidenceListActivity - to display the full portfolio of residences.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="01">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Objectives</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Objectives</h1>
 <p>This lab will significantly extend the MyRent app to include a new ListView where all residences can be inspected:</p>
 <p>Continue building the MyRent app that you commenced in the previous lab.</p>
 <p>For reference, we are providing a version here, MyRent-01:</p>
@@ -124,12 +144,9 @@ h3
 <p><img alt="" src="img/02.png"></p>
 <p>The Project will take on a different shape with some interesting new classes and approaches:</p>
 <p><img alt="" src="img/03.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="02">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Model</h1>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Model</h1>
 <p>When introducing new features, it is often useful to start with the model. </p>
 <ul>
 <li>We would like to incorporate a collection of Residence instances as opposed to just a single Residence as previously. </li>
@@ -194,12 +211,9 @@ public class Portfolio
 </code></pre>
 
 <p>Notice that, for test purposes, we are populating residences list with a random set of Residence objects.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="03">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Application</h1>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Application</h1>
 <p>To manage the list of residences, we use an <code>Application</code> object. </p>
 <ul>
 <li>This is an object created when the application is launched, and we are guaranteed that there will only ever be one of them. </li>
@@ -251,12 +265,9 @@ public class MyRentApp extends Application
 
 <p>Run the app now, and place a breakpoint in the onCreate method. If the app stops at this point, then you have successfully introduced an application object.
 <img alt="" src="img/08.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="04">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Layouts</h1>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Layouts</h1>
 <p>We need two new layout resources in order to build the list view:</p>
 <ul>
 <li>activity_residencelist.xml</li>
@@ -323,12 +334,9 @@ public class MyRentApp extends Application
 
 &lt;/RelativeLayout&gt;
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="05">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>ResidenceListActivity</h1>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>ResidenceListActivity</h1>
 <p>We can now start to introduce the ResidenceListActivity class</p>
 <h2>ResidenceListActivity</h2>
 <pre><code>package org.wit.myrent.activities;
@@ -394,12 +402,9 @@ public class ResidenceListActivity extends Activity
 <p>Inspect the above closely, and note how our app now contains 2 activities, with ResidenceListActivity being the 'MAIN' one.</p>
 <p>Verify that the app runs corrrectly. Drop a breakpoint in the onCreate method above, and verify that the portfolio is properly initialised. Also notice that the listView is initialised.
 <img alt="Figure 1: Execution halted immediately following instantiation of Portfolio object" src="img/09.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="06">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Adapters</h1>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Adapters</h1>
 <p>In order to update the list with the residence objects contained in the portfolio, we need an Adapter. </p>
 <ul>
 <li>An Adapter is a special class we can append to the end of the existing ResidenceListActivity class (make sure it is outside the closing brace of ResidenceListActivity).</li>
@@ -539,12 +544,9 @@ class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
   }
 }
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="07">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Intents</h1>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>Intents</h1>
 <p>Currently the application just displays the list, and we do not have any way of navigating from the list to individual residences. To bind them we will first have to listen for clicks on the list in ResidenceListActivity. This requires that we implement OnItemClickListener:</p>
 <pre><code>public class ResidenceListActivity extends Activity implements &lt;AdapterView class=&quot;OnItemClickListener&quot;&gt;&lt;/AdapterView&gt;
 </code></pre>
@@ -668,12 +670,9 @@ class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
   }
 }
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="08">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Activity Arguments</h1>
+  <div  class="ui tab segment lab" data-tab="08">
+    <h1>Activity Arguments</h1>
 <ul>
 <li>
 <p>When ResidenceActivity is started, it doesn't seem to display anything useful - and certainly not the items in the list we started it from. </p>
@@ -879,12 +878,9 @@ public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
 
 
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="09">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>onResume</h1>
+  <div  class="ui tab segment lab" data-tab="09">
+    <h1>onResume</h1>
 <p>You might notice that any changes you make in Residence do not seem to be appearing on the list. i.e. if you check or uncheck the rented status, it remains unchanged in the list view.</p>
 <p>We should fix this, as it is counter-intuitive. </p>
 <p>Back in ResidenceListActivity, introduce a new method into the class (ensuring that you locate it within ResidenceListActivity and not ResidenceAdapter):</p>
@@ -997,12 +993,9 @@ class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
   }
 }
 </code></pre>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="10">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>LogHelpers</h1>
+  <div  class="ui tab segment lab" data-tab="10">
+    <h1>LogHelpers</h1>
 <p>Our final step will be to incorporate some helper classes, upon which we will build later. Create a new package called 'org.wit.android.helpers' - and introduce this class:</p>
 <pre><code>package org.wit.android.helpers;
 
@@ -1038,7 +1031,7 @@ public class LogHelpers
 
 <p>You might consider introducing other log messages in the app now. THe advantage of logs is that you can quickly appreciate the health of various aspects of the app by looking at the logs.</p>
 <p><img alt="Figure 1: Log output generated within MyRentApp.onCreate" src="img/12.png"></p>
-</div>
+  </div>
 <script>
 $('.ui.menu .item')
   .tab({

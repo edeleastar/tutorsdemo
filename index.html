@@ -47,119 +47,104 @@ figcaption
   <body>
 
   <div class="ui container">
-  <header class="ui middle aligned grid">
-    <div class="eight wide column">
-      <h2>
-        <a href="#"> <i class="chevron left icon"></i> </a> Android Application Development <small> (Topics) </small>
-      </h2>
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <a class="ui blue left corner label">
+      <i class="sitemap big  icon"></i>
+    </a>
+    <div class="eight wide center aligned column">
+      <h2 class="headder">    Android Application Development </h2>
     </div>
-     <div class="two wide column grid">
-       <div class="row">
-         <a href="talkwall.html" class="fluid ui tiny red basic button">Presentations</a>
-       </div>
-       <div class="row">
-         <a href="labwall.html" class="fluid ui tiny blue basic button">Labs</a>
-       </div>
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="index.html"> <i class="big sitemap icon"></i>  topics </a>
+      </div>
     </div>
-    <div class="six wide column">
-      <img class="ui image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="talkwall.html"> <i class="big film icon"></i>  slides </a>
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="labwall.html"> <i class="big lab icon"></i> labs </a>
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
     </div>
   </header>
 
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
 
-<div class="ui link cards">
 
-    <div class="ui card">
+<div class="ui four doubling stackable cards">
+
+    <a class="ui card" href="./topic01-overview-and-tools/index.html">
     <div class="content">
-      <a class="header" href="./topic01-overview-and-tools/index.html"> 1: Overview & Tools </a>
+      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+      <div class="header"> 1: Overview & Tools </div>
     </div>
-    <div class="image">
-      <a class="image" href="./topic01-overview-and-tools/index.html">
-        <img src="./topic01-overview-and-tools/./talk-1-android-overview/a-android-overview.jpeg">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./topic01-overview-and-tools/./talk-1-android-overview/a-android-overview.jpeg">
     </div>
     <div class="content">
       <div class="description">
-         <p>Here we explore the general context of the android User Experience, it's role in the mobile platform space and the components that make up the the system. We are particularly interested in the version numbers and how version in general is managed.</p><p>Android introduced a new user interface language to the world, one that is gradually evolving in flexibility and expressiveness. Here we review the principle elements of this language and how its is incorporated into attractive and usable applications</p><p>The first application exhibits a range of new concepts you will not have come across before. Here we tour this app in detail, exploring each of the artifacts we have composed, and attempt to get a sense of how they fit together to form a running app.</p>
+         <p>Android introduced a new user interface language to the world, one that is gradually evolving in flexibility and expressiveness. The first application we will build exhibits range of new concepts you will not have come across before. Here we tour this app in detail, exploring each of the artifacts we have composed, and attempt to get a sense of how they fit together to form a running app.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Topic
-      </a>
-    </div>
-  </div>
+  </a>
 
-    <div class="ui card">
+    <a class="ui card" href="./topic02-activities-and-layouts/index.html">
     <div class="content">
-      <a class="header" href="./topic02-activities-and-layouts/index.html"> 2: Activities & Layouts </a>
+      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+      <div class="header"> 2: Activities & Layouts </div>
     </div>
-    <div class="image">
-      <a class="image" href="./topic02-activities-and-layouts/index.html">
-        <img src="./topic02-activities-and-layouts/./talk-1-app-ui-structure/a-app-structure.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./topic02-activities-and-layouts/./talk-1-app-ui-structure/a-app-structure.png">
     </div>
     <div class="content">
       <div class="description">
-         <p>Android, like IOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. Here we review some of the major elements of this language and become acquainted with the some of the primary interaction patterns.</p><p>If you have completed this lab (but not the exercises yet) then we can review your achievements so far, and closely inspect the code we introduced to accommodate the new activity + the list. We will also review the challenges.</p>
+         <p>Android, like IOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. In the second version of the donation app we start to get a sense of this language and the programming paradigms to support it.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Topic
-      </a>
-    </div>
-  </div>
+  </a>
 
-    <div class="ui card">
+    <a class="ui card" href="./topic03-navigation-and-app-structure/index.html">
     <div class="content">
-      <a class="header" href="./topic03-navigation-and-app-structure/index.html"> 3: Navigation & App Structure </a>
+      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+      <div class="header"> 3: Navigation & App Structure </div>
     </div>
-    <div class="image">
-      <a class="image" href="./topic03-navigation-and-app-structure/index.html">
-        <img src="./topic03-navigation-and-app-structure/./talk-1-donation-03/c-donation-android-v3.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./topic03-navigation-and-app-structure/./talk-1-donation-03/c-donation-android-v3.png">
     </div>
     <div class="content">
       <div class="description">
-         <p>These slides present the solution to the series of challenges in the Donation-02 lab, a series of 8 'challenges' introducing new feature into the donation app.</p><p>This simple application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app.</p><p>We should now begin to have a firm understanding of structure of an android project as presented in Eclipse. Here we review the MyRent v00 in detail, and review all its working parts</p><p>Although the app is still relatively simple, this app crosses a threshold in our understanding of Android.The Activity class implements multiple interfaces, each implementation responding to different widgits. Here we review this in detail, as it represents a pattern we will see in most of the application we develop.</p>
+         <p>This first application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new app though which we will explore the major features of the SDK.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Topic
-      </a>
-    </div>
-  </div>
+  </a>
 
-    <div class="ui card">
+    <a class="ui card" href="./topic04-widgets-and-events/index.html">
     <div class="content">
-      <a class="header" href="./topic04-widgets-and-events/index.html"> 4: Platform & Events </a>
+      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+      <div class="header"> 4: Platform & Events </div>
     </div>
-    <div class="image">
-      <a class="image" href="./topic04-widgets-and-events/index.html">
-        <img src="./topic04-widgets-and-events/./talk-1-android-stack/a-android-stack.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./topic04-widgets-and-events/./talk-1-android-stack/a-android-stack.png">
     </div>
     <div class="content">
       <div class="description">
-         <p>Android is a sophisticated, multi-layered operating system encompassing a wide range of features, capabilities and components. This is organised into a 'Stack', whereby each layer communicates with the layer immediately below. Here we review this stack and briefly examine the primary components at each layer.</p><p>We review the structure, model and code in the MyRent 01 and 02 applications. The application at this stage has 2 views - sometimes called a 'Master-Detail' pattern. The Master presents a list of items which, if selected, will launch a detail view presenting the individual items. The List if items is randomly generated at application startup, and cannot be extended.</p><p>Central to almost all Android applications is the notion of an event. How events are intercepted and handled is an aspect of all android programmes. Here we review the underlying Java mechanisms used in this context</p><p>This is the specification for the first assignment. When you complete the MyRent labs, you should consider turning your attention to this specification here, and move on with one of the required features. Sometimes you may have to do some independent research.</p>
+         <p>Android is a sophisticated, multi-layered operating system encompassing a wide range of features, capabilities and components. This is organised into a 'Stack', whereby each layer communicates with the layer immediately below. Here we review this stack and briefly examine the primary components at each layer. We also press on with exploring the SDK.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Topic
-      </a>
-    </div>
-  </div>
+  </a>
 
 </div>
 
-<hr>
    </div>
 
 

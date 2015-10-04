@@ -81,32 +81,40 @@ h3
 
 </style>
 
-
-<div class="ui fixed top pointing inverted borderless compact menu labmenu">
+<div class="ui fixed top pointing inverted menu labmenu">
   <header class="header item">
-    <a onclick="window.history.back()" href="#"> <i class="chevron left icon"></i> </a>
-    1: Overview & Tools
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      1: Overview & Tools
+    </a>
   </header>
-
-  <a class="active item" data-tab="Android-Tools-02"> Android-Tools-02 </a>
-    <a class="item" data-tab="01"> 01 </a>
-    <a class="item" data-tab="02"> 02 </a>
-    <a class="item" data-tab="03"> 03 </a>
-    <a class="item" data-tab="05"> 05 </a>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Android-Tools-02">
+        Android-Tools-02
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+    </div>
 </div>
 
-<div class="ui bottom attached  active tab segment lab" data-tab="Android-Tools-02">
-  <div class "ui segment">
-    <br>
-  </div>
-  <h1>Objectives</h1>
+<br><br>
+
+  <div  class="ui tab segment lab" data-tab="Android-Tools-02">
+    <h1>Objectives</h1>
 <p>In this lab we shall introduce more advanced tools. We provide a customized set of styles applicable to HTML and Java source code. We demonstrate how to use the standalone SDK Manager to import additional packages or delete existing packages. Android Studio possesses a virtual device (AVD) on which the apps you develop may be installed and tested. We briefly discuss this. Simple instructions are provided on how to deploy your apps on a physical phone during development. Finally, a number of sample applications are provided that you may install on Genymotion by simply dragging and dropping onto the virtual device.</p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="01">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Code Styling</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Code Styling</h1>
 <p>The Android Studio default configuration includes a section dealing with code styling. This refers to such features as the number of spaces used in indentation, the positioning of curly braces - for example is the opening brace inline or on the next line - and so on.</p>
 <p>The default code styling does not really match our requirements and therefore we have provided a customized styling jar. Our customized scheme has made changes to both Java and HTML styling. The following describes how to replace the default styling with this customized version.</p>
 <p>We begin introducing the customized styling by first accessing the Default Preferences pane, that may be opened from within Android Studio Preferences.</p>
@@ -145,12 +153,9 @@ h3
 </ul>
 <p><img alt="Figure 7: Reformat using imported style" src="img/56.png"></p>
 <p><img alt="Figure 8: Accept defaults" src="img/57.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="02">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Android Virtual Device (AVD)</h1>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Android Virtual Device (AVD)</h1>
 <p>The following screenshots show how to launch the Android Virtual Device (AVD) manager, delete an existing AVD and replace with a more suitable one:</p>
 <p><img alt="Figure:  Open Android Virtual Device (AVD) Manager" src="img/30.png"><br><br>
 <img alt="Figure:  View default AVD" src="img/31.png"><br><br>
@@ -162,12 +167,9 @@ h3
 <p>Run an app on the newly created AVD, for example Hello ICTSkills and select the virtual device (emulator) on which to install the app:</p>
 <p><img alt="Figure: On launching app new AVD now available in addition to Genymotion" src="img/37.png">
 <img alt="Figure: Hello ICTSkills app installed and running on Nexus AVD" src="img/38.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="03">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>SDK Manager</h1>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>SDK Manager</h1>
 <p>This step illustrates use of the SDK Manager. It provided for reference only at this stage: you are recommended not to install or delete packages only when necessary.</p>
 <ul>
 <li>
@@ -233,12 +235,9 @@ h3
 </li>
 </ul>
 <p><img alt="Figure 8: HAXM accelerator already installed" src="img/43.png"></p>
-</div>
-<div class="ui bottom attached tab  segment lab" data-tab="05">
-    <div class "ui segment">
-    <br>
   </div>
-  <h1>Sample Android apps</h1>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Sample Android apps</h1>
 <p>Download the following apps from the local achive to a temporary folder and, in turn, drag and drop each onto the GenyMotion emulator.</p>
 <ul>
 <li>This will install the apps on the virtual device.</li>
@@ -259,7 +258,7 @@ h3
 </li>
 </ul>
 <p>Launch the apps and experiment with their functionality.</p>
-</div>
+  </div>
 <script>
 $('.ui.menu .item')
   .tab({

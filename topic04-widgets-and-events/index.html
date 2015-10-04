@@ -47,151 +47,131 @@ figcaption
   <body>
 
   <div class="ui container">
-  <header class="ui middle aligned grid">
-    <div class="eight wide column">
-      <h2>
-        <a href="../index.html"> <i class="chevron left icon"></i> </a> 4: Platform & Events
-      </h2>
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <div class="eight wide  column">
+      <h2> 4: Platform & Events </h2>
+      <!--<h3> () </h3>-->
     </div>
-    <div class="eight wide column">
-      <img class="ui image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="../index.html"> <i class="big sitemap icon"></i></a>
+        topics
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="../talkwall.html"> <i class="big film icon"></i></a>
+        slides
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="../labwall.html"> <i class="big lab icon"></i></a>
+        labs
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
     </div>
   </header>
 
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
 
 
-<div class="ui link cards">
-      <div class="ui card">
+<div class="ui four doubling stackable cards">
+      <a class="ui card" href="./talk-1-android-stack/a-android-stack.pdf">
     <div class="content">
-      <a class="header" href="./talk-1-android-stack/a-android-stack.pdf"> The Android Stack </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> The Android Stack </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-1-android-stack/a-android-stack.pdf">
-        <img src="./talk-1-android-stack/a-android-stack.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-1-android-stack/a-android-stack.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Android is a sophisticated, multi-layered operating system encompassing a wide range of features, capabilities and components. This is organised into a 'Stack', whereby each layer communicates with the layer immediately below. Here we review this stack and briefly examine the primary components at each layer.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-2-myrent-02/b-myrent-01-02.pdf">
     <div class="content">
-      <a class="header" href="./talk-2-myrent-02/b-myrent-01-02.pdf"> MyRent02 </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> MyRent02 </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-2-myrent-02/b-myrent-01-02.pdf">
-        <img src="./talk-2-myrent-02/b-myrent-01-02.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-2-myrent-02/b-myrent-01-02.png">
     </div>
     <div class="content">
       <div class="description">
          <p>We review the structure, model and code in the MyRent 01 and 02 applications. The application at this stage has 2 views - sometimes called a 'Master-Detail' pattern. The Master presents a list of items which, if selected, will launch a detail view presenting the individual items. The List if items is randomly generated at application startup, and cannot be extended.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-3-event-handling/e-event-handling.pdf">
     <div class="content">
-      <a class="header" href="./talk-3-event-handling/e-event-handling.pdf"> Event Handling </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Event Handling </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-3-event-handling/e-event-handling.pdf">
-        <img src="./talk-3-event-handling/e-event-handling.jpeg">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-3-event-handling/e-event-handling.jpeg">
     </div>
     <div class="content">
       <div class="description">
          <p>Central to almost all Android applications is the notion of an event. How events are intercepted and handled is an aspect of all android programmes. Here we review the underlying Java mechanisms used in this context</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-4-assignment-1/e-assignment-1.pdf">
     <div class="content">
-      <a class="header" href="./talk-4-assignment-1/e-assignment-1.pdf"> Assignment 1 </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Assignment 1 </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-4-assignment-1/e-assignment-1.pdf">
-        <img src="./talk-4-assignment-1/e-assignment-1.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-4-assignment-1/e-assignment-1.png">
     </div>
     <div class="content">
       <div class="description">
          <p>This is the specification for the first assignment. When you complete the MyRent labs, you should consider turning your attention to this specification here, and move on with one of the required features. Sometimes you may have to do some independent research.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="book-a-myrent-02/index.html">
     <div class="content">
-      <a class="header" href="book-a-myrent-02/index.html"> MyRent-02 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-02 </div>
     </div>
-    <div class="image">
-      <a class="image" href="book-a-myrent-02/index.html">
-        <img src="./book-a-myrent-02/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./book-a-myrent-02/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Our current version of MyRent (V01) only permits a single Residence to be entered. In this lab we seek to manage a list of residences. To do this we need to extend the model by including a new class - 'Portfolio' - to manage all our residences. We will also need a new Activity - ResidenceListActivity - to display the full portfolio of residences.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="book-b-event-handling/index.html">
     <div class="content">
-      <a class="header" href="book-b-event-handling/index.html"> Event-Handling </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Event-Handling </div>
     </div>
-    <div class="image">
-      <a class="image" href="book-b-event-handling/index.html">
-        <img src="./book-b-event-handling/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./book-b-event-handling/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>This is a short lab whose aim is to provide a detailed explanation of event handling via a simple standalone non-android application</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
   </div>
    </div>

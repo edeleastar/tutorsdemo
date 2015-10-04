@@ -47,173 +47,146 @@ figcaption
   <body>
 
   <div class="ui container">
-  <header class="ui middle aligned grid">
-    <div class="eight wide column">
-      <h2>
-        <a href="../index.html"> <i class="chevron left icon"></i> </a> 3: Navigation & App Structure
-      </h2>
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <div class="eight wide  column">
+      <h2> 3: Navigation & App Structure </h2>
+      <!--<h3> () </h3>-->
     </div>
-    <div class="eight wide column">
-      <img class="ui image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="../index.html"> <i class="big sitemap icon"></i></a>
+        topics
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="../talkwall.html"> <i class="big film icon"></i></a>
+        slides
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="../labwall.html"> <i class="big lab icon"></i></a>
+        labs
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
     </div>
   </header>
 
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
 
 
-<div class="ui link cards">
-      <div class="ui card">
+<div class="ui four doubling stackable cards">
+      <a class="ui card" href="./talk-1-donation-03/c-donation-android-v3.pdf">
     <div class="content">
-      <a class="header" href="./talk-1-donation-03/c-donation-android-v3.pdf"> Donation Android V3 </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Donation Android V3 </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-1-donation-03/c-donation-android-v3.pdf">
-        <img src="./talk-1-donation-03/c-donation-android-v3.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-1-donation-03/c-donation-android-v3.png">
     </div>
     <div class="content">
       <div class="description">
          <p>These slides present the solution to the series of challenges in the Donation-02 lab, a series of 8 'challenges' introducing new feature into the donation app.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-2-donation-models/d-models.pdf">
     <div class="content">
-      <a class="header" href="./talk-2-donation-models/d-models.pdf"> Donation Models </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Donation Models </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-2-donation-models/d-models.pdf">
-        <img src="./talk-2-donation-models/d-models.jpg">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-2-donation-models/d-models.jpg">
     </div>
     <div class="content">
       <div class="description">
          <p>This simple application is already composed of a range of classes related to each other in via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-3-myrent-00/c-myrent-v00.pdf">
     <div class="content">
-      <a class="header" href="./talk-3-myrent-00/c-myrent-v00.pdf"> MyRent V00 </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> MyRent V00 </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-3-myrent-00/c-myrent-v00.pdf">
-        <img src="./talk-3-myrent-00/c-myrent-v00.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-3-myrent-00/c-myrent-v00.png">
     </div>
     <div class="content">
       <div class="description">
-         <p>We should now begin to have a firm understanding of structure of an android project as presented in Eclipse. Here we review the MyRent v00 in detail, and review all its working parts</p>
+         <p>We should now begin to have a firm understanding of structure of an android project as presented in Studio. Here we review the MyRent v00 in detail, and review all its working parts</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="./talk-4-myrent-01/d-myrent-v01.pdf">
     <div class="content">
-      <a class="header" href="./talk-4-myrent-01/d-myrent-v01.pdf"> MyRent V01 </a>
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> MyRent V01 </div>
     </div>
-    <div class="image">
-      <a class="image" href="./talk-4-myrent-01/d-myrent-v01.pdf">
-        <img src="./talk-4-myrent-01/d-myrent-v01.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./talk-4-myrent-01/d-myrent-v01.png">
     </div>
     <div class="content">
       <div class="description">
          <p>Although the app is still relatively simple, this app crosses a threshold in our understanding of Android.The Activity class implements multiple interfaces, each implementation responding to different widgits. Here we review this in detail, as it represents a pattern we will see in most of the application we develop.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lecture
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="book-a-donation-03/index.html">
     <div class="content">
-      <a class="header" href="book-a-donation-03/index.html"> Donation-03 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Donation-03 </div>
     </div>
-    <div class="image">
-      <a class="image" href="book-a-donation-03/index.html">
-        <img src="./book-a-donation-03/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./book-a-donation-03/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>We continue the implementation of Donation to including the welcome, sign up and login. Support these views with a User model, and validate the users on log in. Continue to build on your Donation repository.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="book-b-myrent-00/index.html">
     <div class="content">
-      <a class="header" href="book-b-myrent-00/index.html"> MyRent-00 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-00 </div>
     </div>
-    <div class="image">
-      <a class="image" href="book-b-myrent-00/index.html">
-        <img src="./book-b-myrent-00/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./book-b-myrent-00/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>We start a new application in this lab, which will be succeeded by numerous version over the next few topics. In the first lab the focus is on explaining the essential 'plumbing' of the app, and introducing the first Interface based listener you may have encountered.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
-      <div class="ui card">
+      <a class="ui card" href="book-c-myrent-01/index.html">
     <div class="content">
-      <a class="header" href="book-c-myrent-01/index.html"> MyRent-01 </a>
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> MyRent-01 </div>
     </div>
-    <div class="image">
-      <a class="image" href="book-c-myrent-01/index.html">
-        <img src="./book-c-myrent-01/img/main.png">
-      </a>
+    <div class="ui bordered rounded image">
+      <img src="./book-c-myrent-01/img/main.png">
     </div>
     <div class="content">
       <div class="description">
          <p>In this version of MyRent, we introduce a range of UI Widgets to evolve the UX into something more useful. These widgets will be 'active', meaning that the host Activity will be intercepting and responding to events the user may generate when interacting with the application.</p>
       </div>
     </div>
-    <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-         Lab
-      </a>
-    </div>
-  </div>
+  </a>
 
   </div>
    </div>
